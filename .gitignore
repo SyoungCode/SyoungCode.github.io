@@ -1,0 +1,18 @@
+# Python (api/, ml/)
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# Node (only if you ever add tooling to docs/)
+node_modules/
+
+# OS/editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Data (don't commit large raw datasets — see database/README.md and ml/README.md)
+*.csv
+!writeups/**/*.csv

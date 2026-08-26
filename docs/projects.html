@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Sebastian Young</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">sebastian<span>.</span>young</a>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About / CV</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="ml-lab.html">ML Lab</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="hero" style="padding-top:48px;">
+      <span class="eyebrow">Projects</span>
+      <h1>Featured work, and everything else on GitHub</h1>
+      <p class="dek">A few projects written up properly below, plus a live feed of every public repo on my GitHub — pulled straight from the GitHub API, so it's always current without me having to update this page by hand.</p>
+    </section>
+
+    <section id="featured">
+      <span class="eyebrow">Featured</span>
+      <h2>Case studies</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Sky Teams</h3>
+          <p>Django team-management web app built as a group software development project — departments, teams, and members as relational data, full CRUD, MVC/MVT architecture.</p>
+          <div class="tags">
+            <span class="pill">Python</span>
+            <span class="pill">Django</span>
+            <span class="pill">SQLite</span>
+            <span class="pill">HTML/CSS/JS</span>
+            <span class="pill">Git</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>SmartCampusAPI</h3>
+          <p>Java RESTful API for smart-campus data — rooms, sensors, and sensor readings — with full GET/POST/PUT/DELETE endpoints returning JSON, tested with Postman.</p>
+          <div class="tags">
+            <span class="pill">Java</span>
+            <span class="pill">JAX-RS</span>
+            <span class="pill">Maven</span>
+            <span class="pill">REST</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Loan Approval — ML &amp; Data Mining</h3>
+          <p>Full pipeline on a real-world-style house loan dataset: cleaning, preprocessing, class imbalance handling, and a classifier comparison — KNN (~91.8%), Logistic Regression (~88.2%), Naive Bayes (~87.7%) — plus a regression component.</p>
+          <div class="tags">
+            <span class="pill">Python</span>
+            <span class="pill">Pandas</span>
+            <span class="pill">Scikit-learn</span>
+            <span class="pill">Matplotlib</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="repos">
+      <span class="eyebrow">Live from GitHub</span>
+      <h2>All public repos</h2>
+      <div class="grid" id="repo-grid">
+        <div class="empty-state">Loading repos from GitHub…</div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Sebastian Young</span>
+    <span>
+      <a href="https://github.com/SyoungCode" target="_blank" rel="noopener">GitHub</a>
+      &nbsp;·&nbsp;
+      <a href="contact.html">Contact</a>
+    </span>
+  </div>
+</footer>
+
+<script src="js/github.js"></script>
+</body>
+</html>
