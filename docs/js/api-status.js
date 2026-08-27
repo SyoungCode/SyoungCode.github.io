@@ -1,18 +1,12 @@
 // Pings the backend API and updates the "Backend API" line in the Home
 // page's status strip — a small, honest proof that the frontend and
 // backend actually talk to each other, not just a claim in prose.
-
-const API_BASE = "https://syoungcode-github-io.onrender.com";
+// API_BASE comes from config.js, loaded before this file.
 
 async function checkBackendStatus() {
   const dot = document.getElementById("backend-status-dot");
   const text = document.getElementById("backend-status-text");
   if (!dot || !text) return;
-
-  if (API_BASE.includes("YOUR-RENDER-URL")) {
-    // Not deployed yet — leave the "planned" state as-is, no network call.
-    return;
-  }
 
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 8000);

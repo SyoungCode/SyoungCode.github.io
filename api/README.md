@@ -34,7 +34,14 @@ endpoint, no frontend needed to check it works.
 **Free tier note:** this service sleeps after ~15 minutes of no traffic. The first request
 after that takes 30–50 seconds to wake it back up — expected, not a bug.
 
-## What comes next (Phase 4+)
+## Endpoints
 
-- `GET /api/olist/*` — dashboard KPIs, once `../database/` exists
-- `POST /api/ml/*` — predictions, once `../ml/` has a trained model to load
+- `GET /api/ping` — Phase 3, health check
+- `GET /api/olist/kpis` — Phase 4, dashboard KPIs from Postgres. Returns a clear 503
+  ("Database not connected yet") until `DATABASE_URL` is set — see `../database/README.md`.
+- `POST /api/ml/wine-quality` — Phase 5, live prediction. The model trains itself from
+  public data when the API starts (see `../ml/README.md` for why there's no model file).
+
+## What's left
+
+- An Olist-based prediction endpoint (e.g. late-delivery risk), once the database is seeded.

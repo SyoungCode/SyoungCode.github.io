@@ -392,6 +392,86 @@ footer.site-footer .wrap {
 footer.site-footer a { color: var(--text-muted); }
 footer.site-footer a:hover { color: var(--accent); }
 
+/* ---------- stat tiles (dashboard) ---------- */
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.stat-tile {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 20px 20px 18px;
+}
+
+.stat-tile .value {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.7rem;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.stat-tile .label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+/* ---------- predict form (ML Lab) ---------- */
+
+.predict-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.predict-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.predict-form input {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.86rem;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--text);
+}
+
+.predict-form input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.predict-result {
+  margin-top: 20px;
+  padding: 18px 20px;
+  border-radius: 10px;
+  background: var(--accent-wash);
+  color: var(--accent);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.95rem;
+}
+
+.predict-result.error {
+  background: var(--surface-2);
+  color: var(--text-muted);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }

@@ -31,12 +31,36 @@
     </section>
 
     <section>
-      <div class="placeholder-panel">
+      <div class="placeholder-panel" id="dashboard-note" style="display:none;">
         <h2>Not live yet</h2>
-        <p>This is Phase 4 of the build — it needs the database and API in place first.</p>
-        <p>Once it's live: KPI tiles up top, a couple of charts below, and the SQL behind each number linked so anyone can see exactly how it was computed.</p>
-        <span class="pill">Coming in Phase 4</span>
+        <p id="dashboard-note-detail">The code for this page is finished — it's waiting on the database itself.</p>
+        <span class="pill">See database/README.md</span>
       </div>
+
+      <div class="stat-grid" id="kpi-grid" style="display:none;">
+        <div class="stat-tile">
+          <div class="value" id="kpi-orders">—</div>
+          <div class="label">Total orders</div>
+        </div>
+        <div class="stat-tile">
+          <div class="value" id="kpi-revenue">—</div>
+          <div class="label">Total revenue</div>
+        </div>
+        <div class="stat-tile">
+          <div class="value" id="kpi-review">—</div>
+          <div class="label">Average review score</div>
+        </div>
+        <div class="stat-tile">
+          <div class="value" id="kpi-delivery">—</div>
+          <div class="label">Average delivery time</div>
+        </div>
+      </div>
+
+      <p style="margin-top:24px; font-size:0.85rem; color:var(--text-muted);">
+        Every number above comes straight from a SQL query — see
+        <a href="https://github.com/SyoungCode/SyoungCode.github.io/blob/main/database/queries.sql" target="_blank" rel="noopener">database/queries.sql</a>
+        for exactly what's being run.
+      </p>
     </section>
   </div>
 </main>
@@ -52,5 +76,7 @@
   </div>
 </footer>
 
+<script src="js/config.js"></script>
+<script src="js/dashboard.js"></script>
 </body>
 </html>
