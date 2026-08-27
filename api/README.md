@@ -1,5 +1,7 @@
 # api/ — Phase 3
 
+**Deployed:** https://syoungcode-github-io.onrender.com — `/api/ping` confirmed live.
+
 A minimal FastAPI app with one endpoint (`GET /api/ping`) that exists purely to prove the
 deploy chain works before anything real gets built on top of it.
 

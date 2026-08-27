@@ -2,10 +2,7 @@
 // page's status strip — a small, honest proof that the frontend and
 // backend actually talk to each other, not just a claim in prose.
 
-// TODO: replace with your real Render URL once api/ is deployed
-// (see api/README.md for the deploy steps). Leave it as-is until then —
-// this file quietly does nothing useful without a real URL, which is fine.
-const API_BASE = "https://YOUR-RENDER-URL.onrender.com";
+const API_BASE = "https://syoungcode-github-io.onrender.com";
 
 async function checkBackendStatus() {
   const dot = document.getElementById("backend-status-dot");
